@@ -1,0 +1,1790 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt"
+      class="">
+<head>
+    <meta charset="utf-8">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'mobile';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.pixdomilhao.com/',
+        AccountUUID: 'ab971f2e17a2493e988ccfdd2992de50',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '794768ee',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Fri May 23 23:54:14 UTC 2025',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialPostPageUuid: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'fale-conosco',
+        InitialPageUuid: '38c4bb89e86443e0ab2d9765fa254b2f',
+        InitialPageId: '1178099856',
+        InitialEncodedPageAlias: 'ZmFsZS1jb25vc2Nv',
+        InitialHeaderUuid: '77a8a996f3f24173ada086adac64d427',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '500000',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        HasCustomDomain: true,
+        SimpleSite: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'pt',
+        currentLocale: 'pt',
+        NavItems: '{}',
+        errors: {
+            general: 'Houve um erro ao conectar à página.<br/> Verifique se você não está off-line.',
+            password: 'Nome/combinação de senha incorreta',
+            tryAgain: 'Tente novamente'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 5,
+            NavbarLiveHomePage: 'https://www.pixdomilhao.com/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: true,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+        hasNativeStore: false,
+        defaultLang: 'pt',
+        hamburgerMigration: null,
+        isFlexSite : false
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 22;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<link rel="manifest" href="/manifest.json">
+<!-- Tell the browser it's a PWA -->
+<meta name="mobile-web-app-capable" content="yes">
+<!-- Tell iOS it's a PWA -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- End PWA settings -->
+
+
+
+<link rel="canonical" href="https://www.pixdomilhao.com/fale-conosco.html">
+
+<meta id="view" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon"
+      href="https://irp.cdn-website.com/794768ee/dms3rep/multi/1080.png"/>
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/794768ee/site_favicon_16_1731794928622.ico"/>
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://lirp.cdn-website.com/"/>
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script id='d-js-dmapi'>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if (!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function () {
+            },
+            getCurrentDeviceType: function () {
+                return window._currentDevice;
+            },
+            runOnReady: (ns, fn) => {
+                const safeFn = dmAPI.toSafeFn(fn);
+                ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
+                const eventName = 'afterAjax.' + ns;
+
+                if (document.readyState === 'complete') {
+                    $.DM.events.off(eventName).on(eventName, safeFn);
+                    setTimeout(function () {
+                        safeFn({
+                            isAjax: false,
+                        });
+                    }, 0);
+                } else {
+                    window?.waitForDeferred?.('dmAjax', () => {
+                        $.DM.events.off(eventName).on(eventName, safeFn);
+                        safeFn({
+                            isAjax: false,
+                        });
+                    });
+                }
+            },
+            toSafeFn: (fn) => {
+                if (fn?.safe) {
+                    return fn;
+                }
+                const safeFn = function (...args) {
+                    try {
+                        return fn?.apply(null, args);
+                    } catch (e) {
+                        console.log('function failed ' + e.message);
+                    }
+                };
+                safeFn.safe = true;
+                return safeFn;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+      const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+            const storedWidgetCssLink = cssLinks.widget;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            if(storedWidgetCssLink) {
+                storedWidgetCssLink.disabled = true;
+                loadCssLink(storedWidgetCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    if (storedWidgetCssLink) {
+                      storedWidgetCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href && link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if (link.id && link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      } else if (link.id && link.id.includes("widgetCSS")) {
+        cssLinks.widget = link;
+        checkCss();
+      }
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function (b, a, c) {
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}
+    #dmRoot div.site_content {
+    margin-top: 83px !important;
+}
+
+
+</style>
+<style id="cssVariables" type="text/css">
+    :root {
+  --color_1: rgba(0, 0, 0, 1);
+  --color_2: rgba(255,255,255,1);
+  --color_3: rgba(245, 242, 239, 1);
+  --color_4: rgba(251, 209, 128, 1);
+  --color_5: rgba(174, 178, 158, 1);
+  --color_6: rgba(175, 76, 37, 1);
+  --color_7: rgba(186, 201, 207, 1);
+  --color_8: rgba(151, 151, 151, 1);
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Syncopate:ital,wght@0,400;0,700&family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:ital,wght@0,200..700;1,200..700&family=DM+Sans:ital,wght@0,100..1000;1,100..1000&family=Droid+Sans+Mono:ital,wght@0,400&amp;subset=latin-ext&amp;display=swap"  />
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-mobile-one-package-structured-global-->
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/5488/_dm/s/rt/dist/css/d-css-runtime-mobile-one-package-structured-global.min.css" />
+
+<!-- End of RT CSS Include -->
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/6cbe9bdefe9fcda99361d02cf91b11a6.css" id="widgetCSS" />
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="fale-conosco"] #dm [data-show-on-page-only="fale-conosco"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/794768ee/files/794768ee_0.min.css?v=1561" id="siteGlobalCss" />
+
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style
+        id="additionalGlobalCss" type="text/css"
+>
+</style>
+
+<style id="pagestyle" type="text/css">
+    *#dm *.dmBody a.span.textonly
+{
+	color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody div.dmform-error
+{
+	font-style:normal !important;
+}
+*#dm *.dmBody div.dmforminput textarea
+{
+	font-style:italic !important;
+}
+*#dm *.dmBody div.dmforminput *.fileUploadLink
+{
+	font-style:italic !important;
+}
+*#dm *.dmBody div.checkboxwrapper span
+{
+	font-style:italic !important;
+}
+*#dm *.dmBody div.radiowrapper span
+{
+	font-style:italic !important;
+}
+*#dm *.dmBody nav.u_1144820115
+{
+	color:black !important;
+}
+*#dm *.dmBody div.u_1675003991
+{
+	border-radius:25px !important;
+	-moz-border-radius:25px !important;
+	-webkit-border-radius:25px !important;
+	background-repeat:no-repeat !important;
+	background-image:linear-gradient(450deg,rgba(0,0,0,1) 0%,rgba(84,94,96,1) 100%) !important;
+	background-origin:border-box !important;
+}
+*#dm *.dmBody div.u_1206929659
+{
+	background-repeat:no-repeat !important;
+	background-image:linear-gradient(450deg,rgba(131,131,131,1) 0%,rgba(215,215,215,1) 100%) !important;
+	background-origin:border-box !important;
+}
+*#dm *.dmBody div.u_1356366071
+{
+	background-repeat:no-repeat !important;
+	background-image:linear-gradient(450deg,rgba(131,131,131,1) 0%,rgba(215,215,215,1) 100%) !important;
+	background-origin:border-box !important;
+}
+*#dm *.dmBody a.u_1784363950 span.text
+{
+	color:rgba(35,35,35,1) !important;
+}
+*#dm *.dmBody div.u_1824621499 .texto-menu
+{
+	color:rgba(250,201,56,1) !important;
+}
+*#dm *.dmBody div.u_1824621499 .menuList
+{
+	background-image:linear-gradient(450deg,rgba(69,69,69,1) 0%,rgba(0,0,0,1) 100%) !important;
+	background-origin:border-box !important;
+}
+
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.d-page-1716942098 DIV.dmInner
+{
+	background-repeat:no-repeat !important;
+	background-size:cover !important;
+}
+*#dm *.d-page-1716942098 DIV#dmSlideRightNavRight
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1206929659
+{
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:0 !important;
+}
+*#dm *.dmBody div.u_1434427605
+{
+	margin-left:0 !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1675003991
+{
+	margin-left:20px !important;
+	padding-top:10px !important;
+	padding-left:20px !important;
+	padding-bottom:20px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	margin-right:20px !important;
+	padding-right:0px !important;
+}
+*#dm *.dmBody div.u_1356366071
+{
+	margin-left:0px !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	margin-right:0px !important;
+	padding-right:0px !important;
+	width:auto !important;
+	background-position:50% 50% !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	position:relative !important;
+	height:auto !important;
+	min-height:auto !important;
+	max-width:100% !important;
+	min-width:0 !important;
+	text-align:start !important;
+}
+*#dm *.dmBody a.u_1784363950 span.text
+{
+	font-size:24px !important;
+}
+*#dm *.dmBody a.u_1784363950
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:266px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:10px !important;
+	padding-left:0px !important;
+	padding-bottom:10px !important;
+	min-height:58px !important;
+	max-width:100% !important;
+	padding-right:0px !important;
+	min-width:0 !important;
+	text-align:center !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+}
+*#dm *.dmBody *.u_1824621499 .menuList
+{
+	padding-top:10px !important;
+	padding-bottom:10px !important;
+}
+*#dm *.dmBody div.u_1824621499 .texto-menu
+{
+	font-size:9px !important;
+}
+*#dm *.dmBody div.u_1824621499 .icone-menu
+{
+	width:25px !important;
+}
+
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-60, .size-60, .size-60 > font { font-size: 60px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.dmMobileBody .m-font-size-36, .dmMobileBody .m-size-36, .dmMobileBody .m-size-36 > font { font-size: 36px !important; }.dmMobileBody .m-font-size-30, .dmMobileBody .m-size-30, .dmMobileBody .m-size-30 > font { font-size: 30px !important; }.dmMobileBody .m-font-size-16, .dmMobileBody .m-size-16, .dmMobileBody .m-size-16 > font { font-size: 16px !important; }.dmMobileBody .m-font-size-14, .dmMobileBody .m-size-14, .dmMobileBody .m-size-14 > font { font-size: 14px !important; }.dmMobileBody .m-font-size-11, .dmMobileBody .m-size-11, .dmMobileBody .m-size-11 > font { font-size: 11px !important; }.dmMobileBody .m-font-size-6, .dmMobileBody .m-size-6, .dmMobileBody .m-size-6 > font { font-size: 6px !important; }.dmMobileBody .m-font-size-12, .dmMobileBody .m-size-12, .dmMobileBody .m-size-12 > font { font-size: 12px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+
+  
+  #dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  
+</style>
+
+
+
+
+<style id="fontFallbacks">
+    @font-face {
+  font-family: "Inter Fallback";
+  src: local('Arial');
+  ascent-override: 90.199%;
+  descent-override: 22.4836%;
+  size-adjust: 107.4014%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Jost Fallback";
+  src: local('Arial');
+  ascent-override: 111.656%;
+  descent-override: 39.1318%;
+  size-adjust: 95.8301%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Roboto Fallback";
+  src: local('Arial');
+  ascent-override: 92.6709%;
+  descent-override: 24.3871%;
+  size-adjust: 100.1106%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial');
+  ascent-override: 92.326%;
+  descent-override: 30.7753%;
+  line-gap-override: 8.793%;
+  size-adjust: 113.7274%;
+}@font-face {
+  font-family: "Lato Fallback";
+  src: local('Arial');
+  ascent-override: 101.3181%;
+  descent-override: 21.865%;
+  size-adjust: 97.4159%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Syncopate Fallback";
+  src: local('Arial');
+  ascent-override: 44.8029%;
+  descent-override: 12.2661%;
+  line-gap-override: 4.319%;
+  size-adjust: 169.5796%;
+}@font-face {
+  font-family: "Albert Sans Fallback";
+  src: local('Arial');
+  ascent-override: 91.16%;
+  descent-override: 23.9895%;
+  size-adjust: 104.2124%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Oswald Fallback";
+  src: local('Arial');
+  ascent-override: 145.0682%;
+  descent-override: 35.1423%;
+  size-adjust: 82.2372%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "DM Sans Fallback";
+  src: local('Arial');
+  ascent-override: 94.3696%;
+  descent-override: 29.4905%;
+  size-adjust: 105.1186%;
+  line-gap-override: 0%;
+ }
+</style>
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.pixdomilhao.com/feed/rss2" />
+  <link type="application/atom+xml" rel="alternate" href="https://www.pixdomilhao.com/feed/atom" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://www.pixdomilhao.com/fale-conosco.html"/>
+  <title>
+    
+    Pix do Milhão
+  
+  </title>
+  <!-- Google Tag Manager -->  <script>
+
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MPR34SGH');
+
+  
+
+  
+
+  
+
+  </script>
+  <!-- End Google Tag Manager -->  <!-- Google Tag Manager -->  <script>
+
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PF6CQQ2V');
+
+  
+
+  
+
+  
+
+  </script>
+  <!-- End Google Tag Manager -->  <!-- Google Tag Manager -->  <script>
+
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NDLJBW33');
+
+  
+
+  
+
+  
+
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Pix do Milhão"/>
+  <meta name="twitter:image" content="https://lirp.cdn-website.com/794768ee/dms3rep/multi/opt/1080-1920w.png"/>
+  <meta property="og:title" content="Pix do Milhão"/>
+  <meta property="og:image" content="https://lirp.cdn-website.com/794768ee/dms3rep/multi/opt/1080-1920w.png"/>
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="fale-conosco"  class="dmRoot dmMobileBody fix-mobile-scrolling addCanvasBorder dmResellerSite responsiveTablet "
+      style="padding:0;margin:0;"
+      
+    >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper mobileHamburgerLayout-var5 null mobileHamburgerLayout">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="mobileHamburgerLayout" class="runtime-module-container dm-bfs dm-layout-sec hasAnimations rows-1200 hamburger-reverse dmPageBody d-page-1716942098 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardMobile"> <div id="site_content"> <div class="p_hfcontainer"> <div id="mobile-hamburger-drawer" class="hamburger-drawer layout-drawer" layout="SHARD289cac9ed3175430eb42be55472f57c07===header" data-origin="side-reverse"> <div class="dmRespRow u_1077650757" style="text-align: center;" id="1077650757"> <div class="dmRespColsWrapper" id="1707095020"> <div class="dmRespCol small-12 medium-12 large-12 empty-column" id="1940070228"></div> 
+</div> 
+</div> 
+ <div class="u_1699551890 dmRespRow middleDrawerRow" style="text-align: center;" id="1699551890"> <div class="dmRespColsWrapper" id="1881103956"> <div class="dmRespCol small-12 medium-12 large-12 u_1943373972 content-removed" id="1943373972"> <nav class="u_1169035326 effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HIDE" id="1169035326" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item    " target="" data-target-page-alias="home"> <span class="nav-item-text " data-link-text="Início" data-auto="page-text-style">In&iacute;cio<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="https://pages.pixdomilhao.com/prodadquiridos?p=213&r=true" class="unifiednav__item    " target="" data-target-page-alias="https://pages.pixdomilhao.com/prodadquiridos?p=213&r=true"> <span class="nav-item-text " data-link-text="Consultar" data-auto="page-text-style">Consultar<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/ganhadores.html" class="unifiednav__item    " target="" data-target-page-alias="ganhadores"> <span class="nav-item-text " data-link-text="Ganhadores" data-auto="page-text-style">Ganhadores<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/quem-somos" class="unifiednav__item    " target="" data-target-page-alias="who-we-are"> <span class="nav-item-text " data-link-text="Quem Somos" data-auto="page-text-style">Quem Somos<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/fale-conosco.html" class="unifiednav__item  dmNavItemSelected    " target="" data-target-page-alias="fale-conosco" data-auto="selected-page"> <span class="nav-item-text " data-link-text="Fale Conosco" data-auto="page-text-style">Fale Conosco<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/edições-anteriores" class="unifiednav__item    " target="" data-target-page-alias="edições-anteriores"> <span class="nav-item-text " data-link-text="Edições Anteriores" data-auto="page-text-style">Edi&ccedil;&otilde;es Anteriores<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1699575912" style="text-align: center;" id="1699575912"> <div class="dmRespColsWrapper" id="1533207287"> <div class="dmRespCol small-12 medium-12 large-12 u_1001597040 empty-column" id="1001597040"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div class="site_content"> <div id="hamburger-header-container" class="hamburger-header-container p_hfcontainer"> <div id="mobile-hamburger-header" class="hamburger-header p_hfcontainer" layout="f90ba768c2e84d97a3a68f7d545b6f78===header"> <div class="dmRespRow dmDefaultListContentRow u_1073528616 fullBleedChanged fullBleedMode" style="text-align:center" id="1073528616" mode="4"> <div class="dmRespColsWrapper" id="1610702263"> <div class="u_1262784247 dmRespCol medium-4 large-4 small-2 empty-column" id="1262784247"></div> 
+ <div class="u_1202000490 dmRespCol medium-4 large-4 small-8" id="1202000490"> <div class="u_1508811098 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1508811098"> <a href="/" id="1533012632"><img src="https://lirp.cdn-website.com/794768ee/dms3rep/multi/opt/Logo-329ad408-640w.webp" id="1964030574" class="" data-dm-image-path="https://irp.cdn-website.com/794768ee/dms3rep/multi/Logo-329ad408.webp" width="755" height="368" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div class="dmRespCol medium-4 large-4 small-2 u_1380936703 empty-column" id="1380936703"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <button class="layout-drawer-hamburger hamburger-on-header" id="layout-drawer-hamburger" aria-label="menu"> <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+</button> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_fale-conosco dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div class="u_1206929659 dmRespRow" style="text-align: center;" id="1206929659"> <div class="dmRespColsWrapper" id="1585626438"> <div class="dmRespCol small-12 u_1434427605 medium-12 large-12" id="1434427605"> <div class="widget-c09654 u_1824621499 dmCustomWidget" data-lazy-load="true" data-title="" id="1824621499" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="c096541b19d5463cb02f2376286241ea" data-widget-version="134" data-widget-config="eyJib3R0b21OYXZpZ2F0aW9uTGlzdCI6W3sidGl0bGUiOiJNYWlzIiwibGlua01lbnUiOnt9LCJzaG93U2VsZWN0aW9uU3R5bGUiOm51bGwsImNvbmNhdGVuYXJQZHZDb2RlIjpudWxsLCJpY29uIjoiPHN2ZyB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmVyc2lvbj1cIjEuMVwiIHZpZXdCb3g9XCIwIDAgMTAwIDEwMFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIj5cbiA8cGF0aCBkPVwibTE4Ljc0MiAxNS42MjVjLTEuNzE0OCAwLjAwNzgxMi0zLjEwNTUgMS4zOTg0LTMuMTA5NCAzLjExMzN2MjUuMDA0Yy0wLjAwNzgxMiAxLjcyNjYgMS4zODY3IDMuMTMyOCAzLjEwOTQgMy4xNDA2aDI1LjAwOGMxLjcyNjYtMC4wMDc4MTIgMy4xMjExLTEuNDE0MSAzLjExMzMtMy4xNDA2di0yNS4wMDRjLTAuMDA3ODEyLTEuNzE0OC0xLjM5ODQtMy4xMDU1LTMuMTEzMy0zLjExMzN6bTUwLjAxNiAwYy0wLjgzMjAzLTAuMDAzOTA2LTEuNjI1IDAuMzI0MjItMi4yMTQ4IDAuOTA2MjUtMC41ODk4NCAwLjU4NTk0LTAuOTIxODggMS4zNzg5LTAuOTI1NzggMi4yMDd2OS4zODY3aC05LjM1OTRjLTAuODMyMDMtMC4wMDM5MDYtMS42Mjg5IDAuMzI0MjItMi4yMTg4IDAuOTEwMTYtMC41ODU5NCAwLjU4MjAzLTAuOTE3OTcgMS4zNzg5LTAuOTIxODcgMi4yMDcgMCAwLjgzNTk0IDAuMzI4MTIgMS42MzI4IDAuOTE3OTcgMi4yMjI3czEuMzg2NyAwLjkxNzk3IDIuMjIyNyAwLjkxNzk3aDkuMzU5NHY5LjM1OTRjMCAwLjgzNTk0IDAuMzI4MTIgMS42MzI4IDAuOTE3OTcgMi4yMjI3czEuMzg2NyAwLjkxNzk3IDIuMjIyNyAwLjkxNzk3YzAuODI4MTMtMC4wMDM5MDYgMS42MjExLTAuMzM1OTQgMi4yMDMxLTAuOTI1NzggMC41ODU5NC0wLjU4OTg0IDAuOTEwMTYtMS4zODI4IDAuOTA2MjUtMi4yMTQ4di05LjM1OTRoOS4zOTQ1YzAuODI4MTItMC4wMDM5MDYgMS42MjExLTAuMzM1OTQgMi4yMDctMC45MjU3OCAwLjU4MjAzLTAuNTg5ODQgMC45MTAxNi0xLjM4MjggMC45MDYyNS0yLjIxNDgtMC4wMDM5MDYtMS43MTg4LTEuMzk0NS0zLjEwOTQtMy4xMTMzLTMuMTE3MmgtOS4zOTQ1di05LjM4NjdjLTAuMDAzOTA3LTEuNzE4OC0xLjM5NDUtMy4xMDU1LTMuMTA5NC0zLjExMzN6bS01MC4wMTYgMzcuNTA4Yy0xLjcxODggMC4wMDM5MDctMy4xMDk0IDEuMzk4NC0zLjEwOTQgMy4xMTcydjI1LjAwOGMwLjAwMzkwNyAxLjcxNDggMS4zOTQ1IDMuMTA1NSAzLjEwOTQgMy4xMDk0aDI1LjAwOGMxLjcxNDgtMC4wMDM5MDcgMy4xMDU1LTEuMzk0NSAzLjExMzMtMy4xMDk0di0yNS4wMDhjLTAuMDAzOTA2LTEuNzE4OC0xLjM5NDUtMy4xMTMzLTMuMTEzMy0zLjExNzJ6bTM3LjUxNiAwYy0wLjgzMjAzLTAuMDAzOTA2LTEuNjI4OSAwLjMyMDMxLTIuMjE4OCAwLjkwNjI1LTAuNTg1OTQgMC41ODU5NC0wLjkxNzk3IDEuMzgyOC0wLjkyMTg3IDIuMjEwOXYyNS4wMDhjMC4wMDc4MTIgMS43MjI3IDEuNDE0MSAzLjExNzIgMy4xNDA2IDMuMTA5NGgyNS4wMDRjMS43MTQ4LTAuMDAzOTA3IDMuMTA1NS0xLjM5NDUgMy4xMTMzLTMuMTA5NHYtMjUuMDA4Yy0wLjAwMzkwNi0xLjcxODgtMS4zOTQ1LTMuMTEzMy0zLjExMzMtMy4xMTcyelwiLz5cbjwvc3ZnPiIsImF0aXZhY2FvQ29tcHJhIjpudWxsLCJpc01lbnUiOnRydWV9LHsidGl0bGUiOiJDb25zdWx0YXIiLCJsaW5rTWVudSI6eyJ2YWx1ZSI6Imh0dHBzOi8vcGFnZXMucGl4ZG9taWxoYW8uY29tL3Byb2RhZHF1aXJpZG9zP3A9MjEzJnI9dHJ1ZSIsImxhYmVsIjoiIiwidHlwZSI6InVybCIsImhyZWYiOiJodHRwczovL3BhZ2VzLnBpeGRvbWlsaGFvLmNvbS9wcm9kYWRxdWlyaWRvcz9wPTIxMyZyPXRydWUiLCJyYXdfdXJsIjoiaHR0cHM6Ly9wYWdlcy5waXhkb21pbGhhby5jb20vcHJvZGFkcXVpcmlkb3M/cD0yMTMmcj10cnVlIiwidGFyZ2V0IjpudWxsLCJyZWwiOm51bGx9LCJzaG93U2VsZWN0aW9uU3R5bGUiOm51bGwsImNvbmNhdGVuYXJQZHZDb2RlIjpudWxsLCJpY29uIjoiPHN2ZyB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmVyc2lvbj1cIjEuMVwiIHZpZXdCb3g9XCIwIDAgMTAwIDEwMFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIj5cbiA8cGF0aCBkPVwibTMuMTI1IDI2LjU2MmMwLTYuOTAyMyA1LjU5NzctMTIuNSAxMi41LTEyLjVoNjguNzVjNi45MDIzIDAgMTIuNSA1LjU5NzcgMTIuNSAxMi41djkuMzc1YzAgMC44MjgxMi0wLjMyODEyIDEuNjI1LTAuOTE0MDYgMi4yMTA5LTAuNTg1OTQgMC41ODU5NC0xLjM4MjggMC45MTQwNi0yLjIxMDkgMC45MTQwNi02LjAzOTEgMC0xMC45MzggNC44OTg0LTEwLjkzOCAxMC45MzhzNC44OTg0IDEwLjkzOCAxMC45MzggMTAuOTM4YzEuNzI2NiAwIDMuMTI1IDEuMzk4NCAzLjEyNSAzLjEyNXY5LjM3NWMwIDYuOTAyMy01LjU5NzcgMTIuNS0xMi41IDEyLjVoLTY4Ljc1Yy02LjkwMjMgMC0xMi41LTUuNTk3Ny0xMi41LTEyLjV2LTkuMzc1YzAtMS43MjY2IDEuMzk4NC0zLjEyNSAzLjEyNS0zLjEyNSA2LjAzOTEgMCAxMC45MzgtNC44OTg0IDEwLjkzOC0xMC45MzhzLTQuODk4NC0xMC45MzgtMTAuOTM4LTEwLjkzOGMtMS43MjY2IDAtMy4xMjUtMS4zOTg0LTMuMTI1LTMuMTI1em0zNC4zNzUgMS41NjI1YzAtMS43MjY2LTEuMzk4NC0zLjEyNS0zLjEyNS0zLjEyNXMtMy4xMjUgMS4zOTg0LTMuMTI1IDMuMTI1djYuMjVjMCAxLjcyNjYgMS4zOTg0IDMuMTI1IDMuMTI1IDMuMTI1czMuMTI1LTEuMzk4NCAzLjEyNS0zLjEyNXptMCAxOC43NWMwLTEuNzI2Ni0xLjM5ODQtMy4xMjUtMy4xMjUtMy4xMjVzLTMuMTI1IDEuMzk4NC0zLjEyNSAzLjEyNXY2LjI1YzAgMS43MjY2IDEuMzk4NCAzLjEyNSAzLjEyNSAzLjEyNXMzLjEyNS0xLjM5ODQgMy4xMjUtMy4xMjV6bTAgMTguNzVjMC0xLjcyNjYtMS4zOTg0LTMuMTI1LTMuMTI1LTMuMTI1cy0zLjEyNSAxLjM5ODQtMy4xMjUgMy4xMjV2Ni4yNWMwIDEuNzI2NiAxLjM5ODQgMy4xMjUgMy4xMjUgMy4xMjVzMy4xMjUtMS4zOTg0IDMuMTI1LTMuMTI1elwiIGZpbGwtcnVsZT1cImV2ZW5vZGRcIi8+XG48L3N2Zz4iLCJhdGl2YWNhb0NvbXByYSI6bnVsbCwiaXNNZW51IjpudWxsfSx7InRpdGxlIjoiQ29tcHJhciIsImxpbmtNZW51Ijp7InZhbHVlIjoiaHR0cHM6Ly9jaGVja291dC5waXhkb21pbGhhby5jb20vP3A9MjEzJmU9NTI1OSIsImxhYmVsIjoiIiwidHlwZSI6InVybCIsImhyZWYiOiJodHRwczovL2NoZWNrb3V0LnBpeGRvbWlsaGFvLmNvbS8/cD0yMTMmZT01MjU5IiwicmF3X3VybCI6Imh0dHBzOi8vY2hlY2tvdXQucGl4ZG9taWxoYW8uY29tLz9wPTIxMyZlPTUyNTkiLCJ0YXJnZXQiOm51bGwsInJlbCI6bnVsbH0sInNob3dTZWxlY3Rpb25TdHlsZSI6bnVsbCwiY29uY2F0ZW5hclBkdkNvZGUiOnRydWUsImljb24iOiI8c3ZnIHdpZHRoPVwiMTAwJVwiIGhlaWdodD1cIjEwMCVcIiB2ZXJzaW9uPVwiMS4xXCIgdmlld0JveD1cIjAgMCAxMDAgMTAwXCIgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiPlxuIDxnPlxuICA8cGF0aCBkPVwibTQ4Ljc3IDUwLjE0MS0xNy4yMzQtMTcuMjNjLTIuNzA3LTIuNzEwOS02LjM4MjgtNC4yMzA1LTEwLjIxMS00LjIzMDUtMy44MzIgMC03LjUwNzggMS41MTk1LTEwLjIxNSA0LjIzMDUtMi44MjgxIDIuNzQ2MS00LjEyMTEgNi43MTA5LTMuNDYwOSAxMC41OTggMC40NzY1NiAyLjYzMjggMS45NDkyIDQuOTg0NCA0LjEwOTQgNi41NTg2LTEuOTY4OCAxLjQyMTktMy4zMzk4IDMuNTMxMi0zLjgzOTggNS45MTAyLTAuOTY4NzUgNC4wOTM4IDAuMjM4MjggOC4zOTg0IDMuMTkxNCAxMS4zOTggMi43MTA5IDIuNzAzMSA2LjM4MjggNC4yMjI3IDEwLjIxNSA0LjIyMjcgMy44MjgxIDAgNy41LTEuNTE5NSAxMC4yMTEtNC4yMjI3elwiLz5cbiAgPHBhdGggZD1cIm01MC4xNDEgNDguNzcgMTcuMjM0LTE3LjIzNGMyLjcwNy0yLjcwNyA0LjIzMDUtNi4zODI4IDQuMjMwNS0xMC4yMTEgMC0zLjgzMi0xLjUyMzQtNy41MDc4LTQuMjMwNS0xMC4yMTUtMi43NS0yLjgyODEtNi43MTA5LTQuMTIxMS0xMC41OTgtMy40NjA5LTIuNjMyOCAwLjQ3NjU2LTQuOTg0NCAxLjk0OTItNi41NjI1IDQuMTA5NC0xLjQyMTktMS45Njg4LTMuNTI3My0zLjMzOTgtNS45MDYyLTMuODM5OC00LjA5MzgtMC45Njg3NS04LjQwMjMgMC4yMzgyOC0xMS4zOTggMy4xOTE0LTIuNzEwOSAyLjcwNy00LjIzMDUgNi4zODI4LTQuMjMwNSAxMC4yMTUgMCAzLjgyODEgMS41MTk1IDcuNTAzOSA0LjIzMDUgMTAuMjExelwiLz5cbiAgPHBhdGggZD1cIm05Mi4zNTIgNTYuNDkyYy0wLjQ3NjU2LTIuNjMyOC0xLjk0OTItNC45ODA1LTQuMTA5NC02LjU1ODYgMS45Njg4LTEuNDIxOSAzLjMzOTgtMy41MzEyIDMuODM5OC01LjkxMDIgMC45Njg3NS00LjA5MzgtMC4yMzgyOC04LjM5ODQtMy4xOTE0LTExLjM5OC0yLjcwNy0yLjcwNy02LjM4MjgtNC4yMzA1LTEwLjIxMS00LjIzMDUtMy44MzIgMC03LjUwNzggMS41MjM0LTEwLjIxNSA0LjIzMDVsLTE3LjIzNCAxNy4yMzQgMTcuMjM0IDE3LjIzYzIuNzA3IDIuNzEwOSA2LjM4MjggNC4yMzA1IDEwLjIxMSA0LjIzMDUgMy44MzIgMCA3LjUwNzgtMS41MTk1IDEwLjIxNS00LjIzMDUgMi44MjgxLTIuNzQ2MSA0LjEyMTEtNi43MTA5IDMuNDYwOS0xMC41OTh6XCIvPlxuICA8cGF0aCBkPVwibTQ5Ljg1OSA1MS4yMy0xNy4yMzQgMTcuMjM0Yy0yLjcwNyAyLjcwNy00LjIzMDUgNi4zODI4LTQuMjMwNSAxMC4yMTUgMCAzLjgyODEgMS41MjM0IDcuNTAzOSA0LjIzMDUgMTAuMjExIDIuMjU3OCAyLjMwMDggNS4zMzU5IDMuNjEzMyA4LjU2MjUgMy42NDg0IDAuNjgzNTkgMCAxLjM2MzMtMC4wNjI1IDIuMDM1Mi0wLjE4NzUgMi42MzY3LTAuNDc2NTYgNC45ODQ0LTEuOTQ5MiA2LjU2MjUtNC4xMDk0IDEuNDIxOSAxLjk2ODggMy41MjczIDMuMzM5OCA1LjkwNjIgMy44Mzk4IDQuMDkzOCAwLjk2ODc1IDguMzk4NC0wLjIzODI4IDExLjM5OC0zLjE5MTQgMi43MDctMi43MDcgNC4yMzA1LTYuMzgyOCA0LjIzMDUtMTAuMjE1IDAtMy44MjgxLTEuNTIzNC03LjUwMzktNC4yMzA1LTEwLjIxMXpcIi8+XG4gPC9nPlxuPC9zdmc+IiwiYXRpdmFjYW9Db21wcmEiOm51bGwsImlzTWVudSI6bnVsbH0seyJ0aXRsZSI6IlJlc3VsdGFkb3MiLCJsaW5rTWVudSI6eyJ2YWx1ZSI6ImdhbmhhZG9yZXMiLCJ0eXBlIjoicGFnZSIsImhyZWYiOiIvZ2FuaGFkb3JlcyIsInJhd191cmwiOiIvc2l0ZS83OTQ3NjhlZS9nYW5oYWRvcmVzP25lZT10cnVlJmVkPXRydWUmc2hvd09yaWdpbmFsPXRydWUmcHJldmlldz10cnVlJmRtX3RyeV9tb2RlPXRydWUmZG1fY2hlY2tTeW5jPTEifSwic2hvd1NlbGVjdGlvblN0eWxlIjpudWxsLCJjb25jYXRlbmFyUGR2Q29kZSI6dHJ1ZSwiaWNvbiI6Ijxzdmcgd2lkdGg9XCIxMDAlXCIgaGVpZ2h0PVwiMTAwJVwiIHZlcnNpb249XCIxLjFcIiB2aWV3Qm94PVwiMCAwIDEwMCAxMDBcIiB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCI+XG4gPGc+XG4gIDxwYXRoIGQ9XCJtODYuNDg4IDE0LjQ1M2MtMi45MDIzLTAuNjQwNjItNi4yNTM5LTAuMjMwNDctOS40MDYyIDAuOTYwOTQgMC4wMjczNDQtMS43MDMxIDAuMDE5NTMxLTMuMzcxMS0wLjAyNzM0My00Ljk2ODhoLTU0LjEwNWMtMC4wNDY4NzUgMS41OTc3LTAuMDU4NTk0IDMuMjYxNy0wLjAyNzM0NCA0Ljk2ODgtMy4xNTYyLTEuMTg3NS02LjUwMzktMS42MDE2LTkuNDA2Mi0wLjk2MDk0LTQuMjkzIDAuOTQ1MzEtNy4yMDcgMy44OTQ1LTguMjAzMSA4LjMwMDgtMS4zMDQ3IDUuNzUgMS41NjY0IDEyLjM0NCA4LjA4OTggMTguNTcgNS4xMzY3IDQuOTAyMyAxMi4wMzEgOC45ODA1IDE5LjMxMiAxMS41MDQgMy4wMTU2IDQuMjUzOSA2Ljg3ODkgNy42Nzk3IDExLjc3NyA5Ljc2MTctMC43MTQ4NCAyLjYwOTQtMy4yMjI3IDEwLjE2OC05LjI3NzMgMTQuNzkzbDE0Ljc4NS0wLjAwNzgxMmgxNC43OTdjLTYuMDU4Ni00LjYyNS04LjU2NjQtMTIuMTg0LTkuMjc3My0xNC43OTMgNC44OTg0LTIuMDgyIDguNzYxNy01LjUwNzggMTEuNzc3LTkuNzYxNyA3LjI3NzMtMi41MTk1IDE0LjE3Mi02LjU5NzcgMTkuMzEyLTExLjUgNi41MTk1LTYuMjI2NiA5LjM5NDUtMTIuODE2IDguMDg5OC0xOC41Ny0xLjAwNzgtNC40MDIzLTMuOTIxOS03LjM1MTYtOC4yMTA5LTguMjk2OXptLTY4Ljc1IDIyLjMyYy00LjcxNDgtNC41MDM5LTcuMDcwMy05LjIyMjctNi4yOTY5LTEyLjYyOSAwLjQ1MzEyLTIuMDExNyAxLjU0My0zLjEzNjcgMy40Mjk3LTMuNTU0NyAyLjQ4ODMtMC41NTA3OCA1LjczMDUgMC4yODUxNiA4LjQwMjMgMS45Mzc1IDAuNjA1NDcgNy4yMTA5IDIuMDMxMiAxNC43MzggNC42OTUzIDIxLjQxOC0zLjgzNTktMS45OTIyLTcuMzU5NC00LjQyOTctMTAuMjMtNy4xNzE5em02NC41MjMgMGMtMi44NzExIDIuNzQyMi02LjM5NDUgNS4xNzk3LTEwLjIzIDcuMTcxOSAyLjY2NDEtNi42Nzk3IDQuMDg5OC0xNC4yMTEgNC42OTUzLTIxLjQxOCAyLjY3MTktMS42NTIzIDUuOTE0MS0yLjQ4NDQgOC40MDIzLTEuOTM3NSAxLjg4MjggMC40MTQwNiAyLjk3MjcgMS41NDMgMy40Mjk3IDMuNTU0NyAwLjc3MzQ0IDMuNDA2Mi0xLjU4MiA4LjEyNS02LjI5NjkgMTIuNjI5elwiLz5cbiAgPHBhdGggZD1cIm0zMSA4MS4zNGgzOHY4LjIxNDhoLTM4elwiLz5cbiA8L2c+XG48L3N2Zz4iLCJhdGl2YWNhb0NvbXByYSI6bnVsbCwiaXNNZW51IjpudWxsfSx7InRpdGxlIjoiRmFsZSBDb25vc2NvIiwibGlua01lbnUiOnsidmFsdWUiOiJmYWxlLWNvbm9zY28iLCJsYWJlbCI6IiIsInR5cGUiOiJwYWdlIiwiaHJlZiI6Ii9mYWxlLWNvbm9zY28iLCJyYXdfdXJsIjoiL3NpdGUvOTIxMzg2NzEvZmFsZS1jb25vc2NvP25lZT10cnVlJmVkPXRydWUmc2hvd09yaWdpbmFsPXRydWUmcHJldmlldz10cnVlJmRtX3RyeV9tb2RlPXRydWUmZG1fY2hlY2tTeW5jPTEifSwic2hvd1NlbGVjdGlvblN0eWxlIjpudWxsLCJjb25jYXRlbmFyUGR2Q29kZSI6dHJ1ZSwiaWNvbiI6bnVsbCwiYXRpdmFjYW9Db21wcmEiOm51bGwsImlzTWVudSI6bnVsbH0seyJ0aXRsZSI6IlJlc3VsdGFkb3MiLCJsaW5rTWVudSI6eyJ2YWx1ZSI6ImdhbmhhZG9yZXMiLCJsYWJlbCI6IiIsInR5cGUiOiJwYWdlIiwiaHJlZiI6Ii9nYW5oYWRvcmVzIiwicmF3X3VybCI6Ii9zaXRlLzkyMTM4NjcxL2dhbmhhZG9yZXM/bmVlPXRydWUmZWQ9dHJ1ZSZzaG93T3JpZ2luYWw9dHJ1ZSZwcmV2aWV3PXRydWUmZG1fdHJ5X21vZGU9dHJ1ZSZkbV9jaGVja1N5bmM9MSJ9LCJzaG93U2VsZWN0aW9uU3R5bGUiOm51bGwsImNvbmNhdGVuYXJQZHZDb2RlIjp0cnVlLCJpY29uIjpudWxsLCJhdGl2YWNhb0NvbXByYSI6bnVsbCwiaXNNZW51IjpudWxsfSx7InRpdGxlIjoiRWRpw6fDtWVzIEFudGVyaW9yZXMiLCJsaW5rTWVudSI6eyJ2YWx1ZSI6ImVkacOnw7Vlcy1hbnRlcmlvcmVzIiwibGFiZWwiOiIiLCJ0eXBlIjoicGFnZSIsImhyZWYiOiIvZWRpw6fDtWVzLWFudGVyaW9yZXMiLCJyYXdfdXJsIjoiL3NpdGUvOTIxMzg2NzEvZWRpw6fDtWVzLWFudGVyaW9yZXM/bmVlPXRydWUmZWQ9dHJ1ZSZzaG93T3JpZ2luYWw9dHJ1ZSZwcmV2aWV3PXRydWUmZG1fdHJ5X21vZGU9dHJ1ZSZkbV9jaGVja1N5bmM9MSJ9LCJzaG93U2VsZWN0aW9uU3R5bGUiOm51bGwsImNvbmNhdGVuYXJQZHZDb2RlIjp0cnVlLCJpY29uIjpudWxsLCJhdGl2YWNhb0NvbXByYSI6bnVsbCwiaXNNZW51IjpudWxsfSx7InRpdGxlIjoiRS1ib29rcyIsImxpbmtNZW51Ijp7InZhbHVlIjoiZWJvb2tzIiwidHlwZSI6InBhZ2UiLCJocmVmIjoiL2Vib29rcyIsInJhd191cmwiOiIvc2l0ZS83OTQ3NjhlZS9lYm9va3M/bmVlPXRydWUmZWQ9dHJ1ZSZzaG93T3JpZ2luYWw9dHJ1ZSZwcmV2aWV3PXRydWUmZG1fdHJ5X21vZGU9dHJ1ZSZkbV9jaGVja1N5bmM9MSJ9LCJzaG93U2VsZWN0aW9uU3R5bGUiOnRydWUsImNvbmNhdGVuYXJQZHZDb2RlIjp0cnVlLCJpY29uIjoiPHN2ZyB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmVyc2lvbj1cIjEuMVwiIHZpZXdCb3g9XCIwIDAgMTAwIDEwMFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIj5cbiA8Zz5cbiAgPHBhdGggZD1cIm0zMC44MDEgMTkuODk4Yy0zLjg5ODQgMC03IDMuMTAxNi03IDd2MzcuMTk5aDUyLjV2LTQ0LjE5OXptMjkuMTk5IDI4aC0yMHYtNGgyMHptNC04aC0yOHYtNGgyOHpcIi8+XG4gIDxwYXRoIGQ9XCJtNzYuMTk5IDcxLjg5OGgtNDcuNWMwIDIuMTk5MiAxLjgwMDggNCA0IDRoNDMuNXY0LjE5OTJsLTQ1LjM5OCAwLjAwMzkwNmMtMy44OTg0IDAtNy0zLjEwMTYtNy03di00Ljg5ODRoNTIuNXYzLjY5NTN6XCIvPlxuIDwvZz5cbjwvc3ZnPiIsImF0aXZhY2FvQ29tcHJhIjpmYWxzZSwiaXNNZW51IjpudWxsfV0sImF0aXZhck1lbnVTb2NpYWwiOnRydWUsImxpc3RNZW51U29jaWFsIjpbeyJsaW5rU29jaWFsIjp7InZhbHVlIjoiaHR0cHM6Ly9waXhkb21pbGhhby5jb20uYnIvc3Vwb3J0ZS9hdGVuZGltZW50by8iLCJ0eXBlIjoidXJsIiwiaHJlZiI6Imh0dHBzOi8vcGl4ZG9taWxoYW8uY29tLmJyL3N1cG9ydGUvYXRlbmRpbWVudG8vIiwicmF3X3VybCI6Imh0dHBzOi8vcGl4ZG9taWxoYW8uY29tLmJyL3N1cG9ydGUvYXRlbmRpbWVudG8vIiwidGFyZ2V0IjpudWxsfSwiaWNvblNvY2lhbCI6Ijxzdmcgd2lkdGg9XCIxMDAlXCIgaGVpZ2h0PVwiMTAwJVwiIHZlcnNpb249XCIxLjFcIiB2aWV3Qm94PVwiMCAwIDEwMCAxMDBcIiB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCI+XG4gPGc+XG4gIDxwYXRoIGQ9XCJtODkuNjg4IDM5LjY4OGMtMy43NS0xNC4zNzUtMTUuMzEyLTI1LjkzOC0yOS44NDQtMjkuNTMxcy0zMC4zMTIgMS4wOTM4LTQwLjMxMiAxMi4zNDRjLTEyLjM0NCAxMy43NS0xMy45MDYgMzQuMzc1LTMuOTA2MiA1MC0wLjc4MTI1IDUuNjI1LTEuNDA2MiAxMS4yNS0yLjE4NzUgMTYuODc1LTAuMzEyNSAyLjAzMTIgMi4xODc1IDMuNDM3NSAzLjkwNjIgMi45Njg4IDUuNDY4OC0xLjU2MjUgMTEuMDk0LTIuOTY4OCAxNi41NjItNC41MzEyIDE0Ljg0NCA2LjA5MzggMzIuMDMxIDMuMjgxMiA0My45MDYtNy42NTYyIDExLjA5NC0xMC4xNTYgMTUuNjI1LTI2LjA5NCAxMS44NzUtNDAuNDY5em0tMTAuOTM4IDMwLjE1NmMtOS4zNzUgMTMuNzUtMjcuODEyIDE4LjkwNi00Mi45NjkgMTIuMDMxaC0wLjE1NjI1Yy0wLjYyNS0wLjMxMjUtMS40MDYyLTAuNDY4NzUtMi4zNDM4LTAuMzEyNS00LjM3NSAxLjI1LTguNzUgMi4zNDM4LTEzLjEyNSAzLjU5MzggMC40Njg3NS0zLjc1IDAuOTM3NS03LjM0MzggMS40MDYyLTExLjA5NCAwLjE1NjI1LTEuMjUgMC40Njg3NS0yLjY1NjItMC4xNTYyNS0zLjkwNjItMC40Njg3NS0wLjc4MTI1LTEuMDkzOC0xLjU2MjUtMS41NjI1LTIuNS0xLjA5MzgtMS44NzUtMi4wMzEyLTMuOTA2Mi0yLjgxMjUtNS45Mzc1LTIuNS03LjE4NzUtMi42NTYyLTE1LjE1Ni0wLjMxMjUtMjIuMzQ0IDQuMDYyNS0xMi42NTYgMTUuNjI1LTIyLjE4OCAyOC43NS0yMy43NSAxMy41OTQtMS44NzUgMjcuMTg4IDQuNjg3NSAzNC4yMTkgMTYuMDk0IDcuMTg3NSAxMS43MTkgNi43MTg4IDI2LjcxOS0wLjkzNzUgMzguMTI1elwiLz5cbiAgPHBhdGggZD1cIm03MS43MTkgNTUuMTU2LTcuMDMxMi01LjQ2ODhjLTIuMTg3NS0xLjcxODgtNS4xNTYyLTEuNDA2Mi03LjAzMTIgMC40Njg3NWwtMi4wMzEyIDIuMDMxMmMtMS41NjI1LTAuOTM3NS0yLjk2ODgtMi4wMzEyLTQuMzc1LTMuMjgxMi0xLjI1LTEuMjUtMi4zNDM4LTIuODEyNS0zLjI4MTItNC4zNzVsMi4wMzEyLTIuMDMxMmMxLjg3NS0xLjg3NSAyLjAzMTItNC44NDM4IDAuNDY4NzUtNy4wMzEybC01LjQ2ODgtNy4xODc1Yy0xLjA5MzgtMS41NjI1LTIuODEyNS0yLjUtNC42ODc1LTIuNS0xLjg3NS0wLjE1NjI1LTMuNzUgMC42MjUtNSAxLjg3NWwtNi4wOTM4IDYuMDkzOGMtMy40Mzc1IDMuNDM3NS00LjIxODggOC43NS0yLjAzMTIgMTMuMTI1IDIuOTY4OCA1LjYyNSA2LjcxODggMTAuNjI1IDExLjA5NCAxNXM5LjUzMTIgOC4xMjUgMTUgMTEuMDk0YzEuNzE4OCAwLjkzNzUgMy40Mzc1IDEuMjUgNS4xNTYyIDEuMjUgMi44MTI1IDAgNS43ODEyLTEuMDkzOCA3LjgxMjUtMy4yODEybDYuMDkzOC02LjA5MzhjMS4yNS0xLjI1IDIuMDMxMi0zLjEyNSAxLjg3NS01IDAtMS44NzUtMC45Mzc1LTMuNTkzOC0yLjUtNC42ODc1em0tMy43NSA1LjMxMjUtNi4wOTM4IDYuMDkzOGMtMS41NjI1IDEuNTYyNS0zLjkwNjIgMS44NzUtNS43ODEyIDAuOTM3NS01LTIuNjU2Mi05LjUzMTItNS45Mzc1LTEzLjU5NC0xMHMtNy4zNDM4LTguNTkzOC0xMC0xMy41OTRjLTAuOTM3NS0xLjg3NS0wLjYyNS00LjIxODggMC45Mzc1LTUuNzgxMmw2LjA5MzgtNi4wOTM4aDAuMTU2MjVjMC4xNTYyNSAwIDAuMTU2MjUgMCAwLjE1NjI1IDAuMTU2MjVsNSA2LjU2MjUtMi4wMzEyIDEuODc1Yy0xLjU2MjUgMS41NjI1LTIuMDMxMiA0LjA2MjUtMC45Mzc1IDYuMDkzOCAxLjI1IDIuNSAyLjk2ODggNC42ODc1IDQuODQzOCA2LjU2MjVzNC4wNjI1IDMuNTkzOCA2LjU2MjUgNC44NDM4YzIuMDMxMiAxLjA5MzggNC4zNzUgMC42MjUgNS45Mzc1LTAuOTM3NWwyLjE4NzUtMi4xODc1IDYuNDA2MiA1czAuMTU2MjUgMCAwLjE1NjI1IDAuMTU2MjV2MC4zMTI1elwiLz5cbiA8L2c+XG48L3N2Zz4ifSx7ImxpbmtTb2NpYWwiOnsidmFsdWUiOiJodHRwczovL3d3dy5pbnN0YWdyYW0uY29tL3BpeGRvbWlsaGFvb2ZpY2lhbCIsInR5cGUiOiJ1cmwiLCJocmVmIjoiaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9waXhkb21pbGhhb29maWNpYWwiLCJyYXdfdXJsIjoiaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9waXhkb21pbGhhb29maWNpYWwiLCJ0YXJnZXQiOm51bGx9LCJpY29uU29jaWFsIjoiPHN2ZyB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmVyc2lvbj1cIjEuMVwiIHZpZXdCb3g9XCIwIDAgMTAwIDEwMFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIj5cbiA8cGF0aCBkPVwibTc1IDYuMjVoLTUwYy0xMC4zNCAwLTE4Ljc1IDguNDEwMi0xOC43NSAxOC43NXY1MGMwIDEwLjM0IDguNDEwMiAxOC43NSAxOC43NSAxOC43NWg1MGMxMC4zNCAwIDE4Ljc1LTguNDEwMiAxOC43NS0xOC43NXYtNTBjMC0xMC4zNC04LjQxMDItMTguNzUtMTguNzUtMTguNzV6bTEyLjUgNjguNzVjMCA2Ljg5NDUtNS42MDU1IDEyLjUtMTIuNSAxMi41aC01MGMtNi44OTQ1IDAtMTIuNS01LjYwNTUtMTIuNS0xMi41di01MGMwLTYuODk0NSA1LjYwNTUtMTIuNSAxMi41LTEyLjVoNTBjNi44OTQ1IDAgMTIuNSA1LjYwNTUgMTIuNSAxMi41em0tMzcuNS01MGMtMTMuNzg1IDAtMjUgMTEuMjE1LTI1IDI1czExLjIxNSAyNSAyNSAyNSAyNS0xMS4yMTUgMjUtMjUtMTEuMjE1LTI1LTI1LTI1em0wIDQzLjc1Yy0xMC4zNCAwLTE4Ljc1LTguNDEwMi0xOC43NS0xOC43NXM4LjQxMDItMTguNzUgMTguNzUtMTguNzUgMTguNzUgOC40MTAyIDE4Ljc1IDE4Ljc1LTguNDEwMiAxOC43NS0xOC43NSAxOC43NXptMjcuMjE5LTQ1Ljk2OWMwLjU2MjUgMC41OTM3NSAwLjkwNjI1IDEuNDA2MiAwLjkwNjI1IDIuMjE4OHMtMC4zNDM3NSAxLjYyNS0wLjkwNjI1IDIuMjE4OGMtMC41OTM3NSAwLjU2MjUtMS40MDYyIDAuOTA2MjUtMi4yMTg4IDAuOTA2MjVzLTEuNjI1LTAuMzQzNzUtMi4yMTg4LTAuOTA2MjVjLTAuNTYyNS0wLjU5Mzc1LTAuOTA2MjUtMS40MDYyLTAuOTA2MjUtMi4yMTg4czAuMzQzNzUtMS42MjUgMC45MDYyNS0yLjIxODhjMS4xNTYyLTEuMTI1IDMuMjUtMS4xNTYyIDQuNDM3NSAwelwiLz5cbjwvc3ZnPiJ9XSwibW9zdHJhck1lbnVJbmZlcmlvciI6dHJ1ZSwibW9zdHJhck1lbnVJbmZlcmlvckRlc2t0b3AiOm51bGwsInVybEJhc2UiOiJodHRwczovL2FwaWh1bGsucGxheXNlcnZpY29zLmNvbS5icjoyMDgzIiwicHJhY2FJZCI6IjIxMyIsIm9yZGVtIjoiYXNjIiwiY29uZmlnVmVuZGVuZG8iOiImdmVuZGVuZG89MSIsImJ0blNvY2lhbCI6dHJ1ZSwiZGFkb3NCdG5Tb2NpYWwiOlt7fV0sImNvckljb25lQm90dG9tTmF2aWdhdGlvblNlbGVjaW9uYWRvIjoiIzAwMDAwMCIsImdyb3VwNCI6bnVsbCwiZ3JvdXAzIjpudWxsLCJjb3JYemluaG9NZW51TGF0ZXJhbCI6IiNmYWM5MzgiLCJncm91cDIiOm51bGwsImdyb3VwMSI6bnVsbCwiY29sb3JYemluaG9TaWRlTWVudSI6IiNjMGMwYzAiLCJ0YW1JY29uIjoiMjUiLCJtb3ZpbWVudG9YIjoiMTUiLCJtb3ZpbWVudG9ZIjoiMTAiLCJjb3JJY29uIjoiI2ZhYzkzOSIsImVzcGFjYW1lbnRvWCI6IjUifQ=="> <div class="header"> <div class="container"> <nav class="bottom-nav" role="navigation"> <ul class="menuList" role="menubar"></ul> 
+</nav> 
+</div> 
+</div> 
+ <div id="menuToggle"> <div class="side-menu"> <button id="buttonCloseSideMenu" style="
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 20px;
+            "> <svg id="closeSideMenu" height="32px" version="1.1" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#c0c0c0" class="icone-menu"> <path d="m20.707 20.707c1.2188-1.2188 3.1992-1.2188 4.418 0l24.875 24.875 24.875-24.875c1.2188-1.2188 3.1992-1.2188 4.418 0s1.2188 3.1992 0 4.418l-24.875 24.875 24.875 24.875c1.2188 1.2188 1.2188 3.1992 0 4.418s-3.1992 1.2188-4.418 0l-24.875-24.875-24.875 24.875c-1.2188 1.2188-3.1992 1.2188-4.418 0s-1.2188-3.1992 0-4.418l24.875-24.875-24.875-24.875c-1.2188-1.2188-1.2188-3.1992 0-4.418z" fill-rule="evenodd"></path> 
+</svg> 
+</button> 
+ <nav role="navigation"> <ul id="menu" role="menu"></ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+ <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1704327640" style="transition: opacity 1s ease-in-out 0s;"><p class="m-size-36 text-align-center size-60"><span style="color:rgb(0, 0, 0);font-weight:700;display:unset;font-family:Oswald, 'Oswald Fallback';" class="m-font-size-36 font-size-60" m-font-size-set="true">FALE CONOSCO</span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1356366071 dmRespRow" id="1356366071"> <div class="dmRespColsWrapper" id="1707402789"> <div class="u_1432016313 dmRespCol empty-column small-12 large-3 medium-3" id="1432016313"></div> 
+ <div class="u_1675003991 dmRespCol small-12 large-6 medium-6" id="1675003991"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1914053017" style="transition: opacity 1s ease-in-out 0s;"><p class="m-size-30 size-24"><span class="font-size-24 m-font-size-30" m-font-size-set="true" style="color:rgb(255, 255, 255);font-weight:700;display:unset;font-family:Oswald, 'Oswald Fallback';">Fale conosco</span></p></div> 
+ <a data-display-type="block" class="u_1784363950 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton" file="false" href="https://pixdomilhao.com.br/suporte/atendimento/" data-element-type="dButtonLinkId" id="1784363950" target="_blank"> <span class="iconBg" aria-hidden="true" id="1124400102"> <span class="icon hasFontIcon icon-star" id="1815158070"></span> 
+</span> 
+ <span class="text" id="1316345312">ENTRAR EM CONTATO</span> 
+</a> 
+ <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1949441139" style="transition: opacity 1s ease-in-out 0s;"><p class="m-size-16"><span class="m-font-size-16" m-font-size-set="true" style="color: rgb(255, 255, 255); display: unset;">Atendimento:</span><span single-space="true" class="m-font-size-16" style="color: rgb(255, 255, 255); display: unset;"> <span class="m-font-size-16" style="color: rgb(255, 255, 255); display: unset;"></span> 
+</span></p><p class="m-size-16"><span style="color: rgb(255, 255, 255); display: unset; font-weight: bold;" class="m-font-size-16">Suporte 24h para melhor te atender</span></p></div> 
+</div> 
+ <div class="u_1856747200 dmRespCol empty-column small-12 large-3 medium-3" id="1856747200"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow u_1024843854" id="1024843854"> <div class="dmRespColsWrapper" id="1688690196"> <div class="dmRespCol small-12 large-3 medium-3" id="1297212597"> <div class="u_1732207833 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1732207833"><img src="https://lirp.cdn-website.com/794768ee/dms3rep/multi/opt/Logo-329ad408-640w.webp" alt="" id="1804279525" class="" data-dm-image-path="https://irp.cdn-website.com/794768ee/dms3rep/multi/Logo-329ad408.webp" width="755" height="368" onerror="handleImageLoadError(this)"/></div> 
+ <div class="u_1848600646 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1848600646" style="transition: opacity 1s ease-in-out 0s;"><p class="m-size-16 m-text-align-center size-16"><a href="/visit-us" runtime_url="/visit-us" type="page" class="font-size-16 m-font-size-16" m-font-size-set="true" style="text-decoration: none; font-weight: bold; display: unset; color: rgb(255, 255, 255);">Pr&ecirc;mios incr&iacute;veis</a><a href="/visit-us" runtime_url="/visit-us" type="page" class="font-size-16 m-font-size-16" m-font-size-set="true" style="text-decoration: none; display: unset; color: rgb(255, 255, 255);">, que podem</a></p><p class="m-size-16 m-text-align-center size-16"><a href="/visit-us" runtime_url="/visit-us" type="page" class="font-size-16 m-font-size-16" m-font-size-set="true" style="text-decoration: none; display: unset; color: rgb(255, 255, 255);">mudar o seu estilo de</a><span single-space="true" class="font-size-16 m-font-size-16" style="text-decoration: none; display: unset; color: rgb(255, 255, 255);"> <span class="font-size-16 m-font-size-16" style="text-decoration: none; display: unset; color: rgb(255, 255, 255);"></span> 
+</span><a href="/visit-us" runtime_url="/visit-us" type="page" class="font-size-16 m-font-size-16" m-font-size-set="true" style="text-decoration: none; display: unset; color: rgb(255, 255, 255); font-weight: bold;">vida!</a></p></div> 
+ <div class="u_1819878495 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1819878495"><img src="https://lirp.cdn-website.com/794768ee/dms3rep/multi/opt/aplicap-logo-branca-640w.webp" alt="" id="1536507629" class="" data-dm-image-path="https://irp.cdn-website.com/794768ee/dms3rep/multi/aplicap-logo-branca.webp" width="3020" height="1031" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="u_1991647299 dmRespCol small-12 large-3 medium-3" id="1991647299"> <div class="u_1003641173 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1003641173" style="transition: none; text-align: left; display: block;"> <h5 class="m-size-30 size-30 m-text-align-center" style="letter-spacing: normal;"><span class="font-size-30 m-font-size-30" m-font-size-set="true" style="color:rgb(255, 255, 255);font-weight:700;display:unset;font-family:Oswald, 'Oswald Fallback';">FALE CONOSCO</span></h5> 
+</div> 
+ <a data-display-type="block" class="u_1880363340 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton" file="false" href="https://pixdomilhao.com.br/suporte/atendimento/" data-element-type="dButtonLinkId" id="1880363340" target="_blank"> <span class="iconBg" aria-hidden="true" id="1069369808"> <span class="icon hasFontIcon icon-star" id="1595966872"></span> 
+</span> 
+ <span class="text" id="1283578513">ENTRAR EM CONTATO</span> 
+</a> 
+ <div class="u_1690599558 dmNewParagraph" data-element-type="paragraph" id="1690599558" data-version="5" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-14 m-text-align-center size-18"><span style="color:rgb(255, 255, 255);font-weight:500;display:initial;font-family:Jost, 'Jost Fallback';" class="font-size-18 m-font-size-14" m-font-size-set="true">24 horas dispon&iacute;vel para melhor te atender!</span></p></div></div> 
+ <div class="u_1094254321 dmRespCol small-12 large-3 medium-3" id="1094254321"> <div class="u_1032705210 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1032705210" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-30 size-30"><span class="m-font-size-30 font-size-30" m-font-size-set="true" style="color:rgb(255, 255, 255);font-weight:700;display:unset;font-family:Oswald, 'Oswald Fallback';">SOBRE N&Oacute;S</span></p></div> 
+ <nav class="u_1627374456 unifiednav_vertical effect-bottom2 hide-for-medium hide-for-small main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HOVER" id="1627374456" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/quem-somos" class="unifiednav__item    " target="" data-target-page-alias="who-we-are"> <span class="nav-item-text " data-link-text="Quem Somos" data-auto="page-text-style">Quem Somos<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/política-de-privacidade" class="unifiednav__item    " target="" data-target-page-alias="política-de-privacidade"> <span class="nav-item-text " data-link-text="Política de Privacidade" data-auto="page-text-style">Pol&iacute;tica de Privacidade<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+ <nav class="u_1298499426 unifiednav_vertical effect-bottom2 hide-for-large main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HOVER" id="1298499426" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/quem-somos" class="unifiednav__item    " target="" data-target-page-alias="who-we-are"> <span class="nav-item-text " data-link-text="Quem Somos" data-auto="page-text-style">Quem Somos<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/política-de-privacidade" class="unifiednav__item    " target="" data-target-page-alias="política-de-privacidade"> <span class="nav-item-text " data-link-text="Política de Privacidade" data-auto="page-text-style">Pol&iacute;tica de Privacidade<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="dmRespCol large-3 medium-3 small-12" id="1543272002"> <div class="u_1852786339 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1852786339" style="transition: none; text-align: left; display: block;"><p class="m-size-30 size-30"><span style="color:rgb(255, 255, 255);font-weight:700;display:unset;font-family:Oswald, 'Oswald Fallback';" class="font-size-30 m-font-size-30" m-font-size-set="true">REDES SOCIAIS</span></p></div> 
+ <div class="u_1851912491 align-center text-align-center dmSocialHub gapSpacing" id="1851912491" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://www.instagram.com/pixdomilhaooficial" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.youtube.com/@pixdomilhao" target="_blank" dm_dont_rewrite_url="true" aria-label="youtube" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Youtube&apos;)"> <span class="dmSocialYoutube dm-social-icons-youtube oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.facebook.com/pixdomilhaooficial" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1507290871 dmRespRow" id="1507290871"> <div class="dmRespColsWrapper" id="1442218102"> <div class="dmRespCol large-12 medium-12 small-12" id="1585612701"> <div class="u_1983742883 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1983742883" data-styletopreserve="{" background-image":""}"=""><p class="m-size-11 m-text-align-justify text-align-center size-14"><span class="font-size-14 m-font-size-11" m-font-size-set="true" style="color: rgb(255, 255, 255); font-weight: 500; display: initial;">Processo SUSEP n&ordm; 15414.623658.2025-66, 15414.623660.2025-35, 15414.623630.2025-29 Sorteios lastreados em T&iacute;tulos de Capitaliza&ccedil;&atilde;o da modalidade incentivo emitidos pela Aplicap Capitaliza&ccedil;&atilde;o S/A, CNPJ: 13.122.801/0001-71. &Eacute; vedada participa&ccedil;&atilde;o por menores de 18 (dezoito) anos conforme legisla&ccedil;&atilde;o aplic&aacute;vel. Telefone de Atendimento: (51) 3584-1393. Ouvidoria: 0800 642 8080. Os pr&ecirc;mios ser&atilde;o pagos moeda corrente nacional. As condi&ccedil;&otilde;es gerais do produto podem ser consultadas no endere&ccedil;o eletr&ocirc;nico www.gov.br/susep/pt-br e nos termos dispostos por PIX DO MILHAO, PREMIOS E EBOOKS LTDA CNPJ: 58.534.909/0001-00. Antes de contratar, consulte o Regulamento do produto. Os sorteios e entrega dos pr&ecirc;mios ser&atilde;o realizados de acordo com os crit&eacute;rios estabelecidos neste site, nos termos seguintes: O adquirente concorrer: em todos os sorteios previstos no bilhete digital emitido, mesmo sendo contemplado em alguns deles. Ao contribuir, o titular do BILHETE Digital concorda desde j&aacute; e sem &ocirc;nus a utilizar o seu nome, sua voz e imagem para a divulga&ccedil;&atilde;o desta campanha social. Confira o resultado dos sorteios e as condi&ccedil;&otilde;es de participa&ccedil;&atilde;o em www.pixdomilhao.com</span></p><p class="m-text-align-justify text-align-center"><span style="display: initial;"><br/></span></p><p class="text-align-center m-size-11 size-14"><span class="font-size-14 m-font-size-11" m-font-size-set="true" style="color: rgb(255, 255, 255); display: initial;">&Eacute; proibida a venda de T&iacute;tulo de Capitaliza&ccedil;&atilde;o a menores de 18 (dezoito) anos (Art. 3&ordm; do C&oacute;digo Civil);</span></p><p class="text-align-center m-size-11 size-14" style="letter-spacing: normal;"><span class="font-size-14 m-font-size-11" m-font-size-set="true" style="color: rgb(255, 255, 255); display: initial;">N&uacute;mero de telefone do atendimento Aplicap: (51) 3584-1393 e n&uacute;mero da ouvidoria: 0800 642 8080.</span></p><p class="text-align-center m-size-6 size-8" style="letter-spacing: normal;"><span class="font-size-14 m-font-size-11" m-font-size-set="true" style="display: initial; color: rgb(255, 255, 255);">Imagens meramente ilustrativas</span><span class="font-size-8 m-font-size-6" style="display: initial; color: var(--color_3);">v0.0.5</span></p></div> 
+ <div class="u_1812445507 dmDividerWrapper clearfix hide-for-small hasFullWidth" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1812445507"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1001949707"/></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1864501795 dmRespRow" id="1864501795"> <div class="dmRespColsWrapper" id="1176285247"> <div class="dmRespCol large-12 medium-12 small-12" id="1226480220"> <div class="u_1551787299 dmNewParagraph" data-element-type="paragraph" id="1551787299" style="transition: none 0s ease 0s; text-align: left; display: block;" data-version="5"> <h5 class="m-text-align-center m-size-6 size-8" style="letter-spacing: 0em;"><strong style="font-weight: bold; display: initial; color: rgb(255, 255, 255);" class="m-font-size-12 font-size-15">2024 - PIX DO MILH&Atilde;O</strong><span class="" style="display: initial;"><span style="display: initial;">&nbsp;</span> 
+</span><strong style="display: initial; font-weight: bold; color: rgb(69, 69, 69);" class="font-size-8 m-font-size-6">0.0.7</strong></h5> 
+</div></div> 
+</div> 
+</div> 
+ <div class="u_1079561488 dmRespRow" id="1079561488"> <div class="dmRespColsWrapper" id="1158659081"> <div class="dmRespCol large-12 medium-12 small-12" id="1515274494"> <div class="u_1743590441 dmDividerWrapper clearfix hide-for-small hasFullWidth" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1743590441"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1035453227"/></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1538921817 dmRespRow hide-for-large hide-for-medium" id="1538921817"> <div class="dmRespColsWrapper" id="1411604936"> <div class="dmRespCol large-12 medium-12 small-12" id="1578033578"> <nav class="u_1966262441 unifiednav_vertical hide-for-small effect-text-fill main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_4" layout-sub="" data-show-vertical-sub-items="HOVER" id="1966262441" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="https://www.playservicos.com.br/" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="POWERED BY PLAY55" data-auto="page-text-style">POWERED BY PLAY55<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+ <a class="dmBackToTop" id="dmBackToTop" aria-label="Rolar para o topo" href="#dmContent"></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+<!-- ========= JS Section ========= -->
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "PORTUGUESE"
+    window.isSitePreview = false;
+</script>
+<script>
+    window.customWidgetsFunctions["c096541b19d5463cb02f2376286241ea~134"] = function (element, data, api) {
+        let showMenu = false;
+let indexMenuSelecionado = -1;
+const corSelect = data.config.corIconeBottomNavigationSelecionado;
+const corOrigem = data.config.corXzinhoMenuLateral;
+const bgSelect = data.config.corTextoMenuSelecionado;
+const corBtnCompra = data.config.corBtnCompra
+var pracaId = '';
+var ordem = '';
+var configVendendo = '';
+
+document.documentElement.style.setProperty('--tamIcon', data.config.tamIcon)
+document.documentElement.style.setProperty('--corIcon', data.config.corIcon)
+document.documentElement.style.setProperty('--movimentoX', data.config.movimentoX)
+document.documentElement.style.setProperty('--movimentoY', data.config.movimentoY)
+document.documentElement.style.setProperty('--espacamentoX', data.config.espacamentoX)
+
+const config = {
+    pracaId: data.config.pracaId,
+    ordem: data.config.ordem,
+    configVendendo: data.config.configVendendo,
+    urlBase: data.config.urlBase,
+    etapaId: data.config.etapaId
+};
+
+
+function separarParametrosURLAtual() {
+    const parametros = {};
+    const queryString = window.location.search.slice(1);
+    if (queryString) {
+        const pares = queryString.split("&");
+        pares.forEach(par => {
+            const [chave, valor] = par.split("=");
+            if (chave && valor) {
+            parametros[chave] = valor;
+            }
+        });
+    }
+    return parametros;
+}
+
+function retornaUrlComPdvCodeEUtm(url) {
+    const params = new URL(window.document.location).searchParams;
+
+    let urlParaAbrir = url?.linkMenu?.href;
+    const campaign = params.get("utm_campaign");
+    const content = params.get("utm_content");
+    const medium = params.get("utm_medium");
+    const source = params.get("utm_source");
+    const term = params.get("utm_term");
+    const paramA = params.get("a");
+    const pdvCode = params.get("pdv_code");
+    const clickMaiusculo = params.get("clickId");
+    const clickMinusculo = params.get("clickid");
+    let click = clickMaiusculo ? clickMaiusculo : clickMinusculo
+    let codigoParametro, parametro;
+    
+    if (paramA && paramA.trim() !== '') {
+        codigoParametro = paramA;
+        parametro = 'a';
+    } else if (pdvCode) {
+        codigoParametro = pdvCode;
+        parametro = 'pdv_code';
+    }
+    
+    if (codigoParametro != undefined) {
+        if (urlParaAbrir?.includes('?') && urlParaAbrir.split('?')?.[1]?.length > 0) urlParaAbrir += `&${parametro}=${codigoParametro}`;
+        else urlParaAbrir += `?${parametro}=${codigoParametro}`;
+    }
+
+    if (campaign) {
+        if (urlParaAbrir?.includes('?') && urlParaAbrir.split('?')?.[1]?.length > 0) urlParaAbrir = `${urlParaAbrir}&utm_campaign=${campaign}`;
+        else urlParaAbrir = `${urlParaAbrir}?utm_campaign=${campaign}`;
+    }
+    if (content) {
+        if (urlParaAbrir?.includes('?') && urlParaAbrir.split('?')?.[1]?.length > 0) urlParaAbrir = `${urlParaAbrir}&utm_content=${content}`;
+        else urlParaAbrir = `${urlParaAbrir}?utm_content=${content}`;
+    }
+    if (medium) {
+        if (urlParaAbrir?.includes('?') && urlParaAbrir.split('?')?.[1]?.length > 0) urlParaAbrir = `${urlParaAbrir}&utm_medium=${medium}`;
+        else urlParaAbrir = `${urlParaAbrir}?utm_medium=${medium}`;
+    }
+    if (source) {
+        if (urlParaAbrir?.includes('?') && urlParaAbrir.split('?')?.[1]?.length > 0) urlParaAbrir = `${urlParaAbrir}&utm_source=${source}`;
+        else urlParaAbrir = `${urlParaAbrir}?utm_source=${source}`;
+    }
+    if (term) {
+        if (urlParaAbrir?.includes('?') && urlParaAbrir.split('?')?.[1]?.length > 0) urlParaAbrir = `${urlParaAbrir}&utm_term=${term}`;
+        else urlParaAbrir = `${urlParaAbrir}?utm_term=${term}`;
+    }
+    if (click) {
+        if (urlParaAbrir?.includes('?') && urlParaAbrir.split('?')?.[1]?.length > 0) urlParaAbrir = `${urlParaAbrir}&clickId=${click}`;
+        else urlParaAbrir = `${urlParaAbrir}?clickId=${click}`;
+    }
+    return urlParaAbrir;
+}
+
+function renderMenu() {
+    if ($(document).find('#layout-drawer-hamburger')?.['0']) $(document).find('#layout-drawer-hamburger').css({display: 'none'});
+    if ($(document).find('#flex-header').length > 0) $('#flex-header').find('.hamburgerButton').remove() 
+
+    $(document).find('#buttonCloseSideMenu').css({background: 'transparent'});
+
+    $(element).find(".menuList").empty();
+
+    $(element).find('.header').css({visibility: 'visible'});
+
+    // Recupera a seleção salva no localStorage
+    const storedSelection = JSON.parse(localStorage.getItem('iconSelection'));
+
+    // aqui pega cada item/icons do bottom navigation
+    data.config.bottomNavigationList.forEach((bottomNavigationListElement, i) => {
+        let url = "";
+
+        if (bottomNavigationListElement?.concatenarPdvCode && bottomNavigationListElement?.linkMenu?.href) url = `href="${retornaUrlComPdvCodeEUtm(bottomNavigationListElement)}"`;
+        else if (bottomNavigationListElement?.linkMenu?.href) url = `href="${bottomNavigationListElement.linkMenu.href}"`;
+        
+
+        const itemId = `bottom-nav-item-${i}`; 
+        let extraId = "";
+
+        if (storedSelection && storedSelection.id === itemId)
+            if(data.config.bottomNavigationList[i]?.showSelectionStyle) extraId = 'id="selected-item"';
+
+
+        if (bottomNavigationListElement?.icon) {
+            if (bottomNavigationListElement?.isMenu)
+                $(element).find(".menuList").append(`
+                <li ${extraId} class="bottom-nav-item ${itemId} " role="menuitem">
+                    <span
+                        class="bottom-nav-link"
+                    >
+                        ${bottomNavigationListElement.icon ? bottomNavigationListElement.icon : ''}
+                        <span class="texto-menu texto-menu-${i}">
+                            ${bottomNavigationListElement.title ? bottomNavigationListElement.title : ''}
+                        </span>
+                    </span>
+                </li>
+            `);
+
+            else $(element).find(".menuList").append(`
+                <li ${extraId} class="bottom-nav-item ${itemId} " role="menuitem">
+                    <a
+                        ${url}
+                        ${bottomNavigationListElement?.linkMenu?.type === 'url' && bottomNavigationListElement?.linkMenu?.target ? `target=${bottomNavigationListElement.linkMenu.target}` : 'target="_self"'}
+                        class="bottom-nav-link"
+                    >
+                        ${bottomNavigationListElement.icon ? bottomNavigationListElement.icon : ''}
+                        <span class="texto-menu texto-menu-${i}">
+                            ${bottomNavigationListElement.title ? bottomNavigationListElement.title : ''}
+                        </span>
+                    </a>
+                </li>
+            `);
+        }
+
+        if (!bottomNavigationListElement?.isMenu && !bottomNavigationListElement?.icon) {
+            $(element).find("#menu").append(`
+                <li ${extraId} class="side-menu-nav-item ${itemId}" role="menuitem">
+                    <a
+                        ${url}
+                        ${bottomNavigationListElement?.linkMenu?.type === 'url' && bottomNavigationListElement?.linkMenu?.target ? `target=${bottomNavigationListElement.linkMenu.target}` : 'target="_self"'}
+                        class="texto-menubar texto-menubar-${i}"
+                    >
+                        ${bottomNavigationListElement?.title ? bottomNavigationListElement.title : ''}
+                    </a>
+                </li>
+            `);
+        }
+
+        if (bottomNavigationListElement?.icon) $('.bottom-nav-link').find('svg').attr('fill', data.config.corXzinhoMenuLateral).addClass('icone-menu');
+        
+        removerColocarSelecionado()
+        
+        // Evento de clique para atualizar o item selecionado
+        $(document).on('click', `.${itemId}`, function(event) {
+            const menuItem = $(element).find('#menuToggle')?.['0'];
+            if(data.config.bottomNavigationList[i]?.showSelectionStyle){
+                $(element).find('#selected-item').removeAttr('id');
+                $(this).attr('id', 'selected-item');
+                removerColocarSelecionado();
+            }else {
+                $(element).find('#selected-item').removeAttr('id'); 
+                $('.bottom-nav-item').find('a svg').attr('fill', corOrigem).css({'color' : '#selected-item .texto-menu', 'background-color' : '.menuList'});                
+            }
+            
+            if (data.config.bottomNavigationList[i]?.isMenu) {
+                $(menuItem).removeClass('closed-side-menu-toggle');
+                $(menuItem).addClass('opened-side-menu-toggle');
+                $(menuItem).css({visibility: 'visible'});
+                $(element).find('.side-menu').removeClass('closed-side-menu');
+                $(element).find('.side-menu').addClass('opened-side-menu');
+                $(element).find('.side-menu').css({display: 'block'});
+            }
+        });
+    });
+    
+    $(document).on('click', '#closeSideMenu', function(event) {
+        const menuItem = $(element).find('#menuToggle')?.['0'];
+        $(element).find('.side-menu').removeClass('opened-side-menu');
+        $(menuItem).removeClass('opened-side-menu-toggle');
+        $(menuItem).addClass('closed-side-menu-toggle');
+        setTimeout(() => $(element).find('.side-menu').css({display: 'none'}), 800);
+        setTimeout(() => $(menuItem).css({visibility: 'hidden'}), 800);
+        $(element).find('.side-menu').addClass('closed-side-menu');
+    });
+}
+
+
+function menuSocial(){
+    document.documentElement.style.setProperty('--tamBtn', data.config.tamBtn)
+    document.documentElement.style.setProperty('--alturaTop', data.config.alturaTop)
+    document.documentElement.style.setProperty('--larguraRight', data.config.larguraRight)
+    document.documentElement.style.setProperty('--espacamentoMenu', data.config.espacamentoMenu)
+    document.documentElement.style.setProperty('--corBtnSocial', data.config.corBtnSocial)
+
+    let labelMenu = ''
+    if ($(document).find('#hamburger-header-container').length > 0) labelMenu = '#hamburger-header-container'
+    if ($(document).find('#flex-header').length > 0) labelMenu = '#flex-header'
+    $('#listaMenuSocial').remove(); 
+    $(`${labelMenu}`).append('<section id="listaMenuSocial"></section>');
+    data.config?.listMenuSocial.forEach((cadaIconeSocial) => {
+        $('#listaMenuSocial').append(`
+            <a href="${cadaIconeSocial?.linkSocial?.href}">
+                ${cadaIconeSocial.iconSocial}
+            </a>
+        `)
+    })
+
+}
+
+if(data.config.ativarMenuSocial){
+    if ((window.matchMedia("(max-device-width: 768px)").matches || window.innerWidth <= 480) && !data.config.mostrarMenuInferiorDesktop) menuSocial();
+    else $("#listaMenuSocial").remove() 
+}
+
+function removerColocarSelecionado(){
+    $('.bottom-nav-item').find('a svg').attr('fill', corOrigem);
+    $('#selected-item').find('a svg').attr('fill', corSelect);
+    var tamBorda = $(element).find('#selected-item').css('border-block-start-width');
+    $(element).find('li').css({'border-block-start-color':'transparent', 'border-block-start-width': tamBorda})
+}
+
+var usarSelection = function(title, itemId){
+    const selection = { title: title, id: itemId };
+    localStorage.setItem('iconSelection', JSON.stringify(selection));
+}
+
+data.config.bottomNavigationList.forEach((bottomNavigationListElement, i) => {
+    const comprarAtivo = bottomNavigationListElement.ativacaoCompra;
+    if(comprarAtivo){
+        retornaUrlComPdvCodeEUtm()
+        const params = new URLSearchParams(window.document.location);
+         urlCheckout = `${params.toString()}${retornaUrlComPdvCodeEUtm(params)}`;
+        $(document).ready(() => {
+            if (data.config.novoLayout) {
+                $('.menuList').addClass('comprarNovo');
+                $(`.bottom-nav-item-${i}`).addClass('novoLayout');
+            }
+        });
+
+        $(`.bottom-nav-item-${i}`).on('click', function(){window.open(urlCheckout)});
+    }
+});
+
+if (data.device !== "desktop" || data.config.mostrarMenuInferiorDesktop) 
+    if (data.config.mostrarMenuInferior) renderMenu();
+
+
+
+    };
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_5488";
+    var build = "2025-05-22T12_49_05";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2025-05-22T12_49_05";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id='d-js-params'>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "mobile";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/5488';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/5488';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["isAutomation.test"] =false;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'mapbox';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] =true;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.storefrontV3.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+    rtFlags["editor.classicHybrid.photogallery.fix"] =true;
+    rtFlags["runtime.lottieOverflow"] =false;
+    rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+    rtFlags["contact.form.browserValidation.enabled"] =true;
+    rtFlags["streamline.monolith.personalization.supportMultipleConditions.enabled"] =false;
+    rtFlags["runtime.cwv.report.cls.enabled"] =true;
+    rtFlags["editor.link.on.container"] =true;
+    rtFlags["flex.runtime.popup.with.show"] =true;
+    rtFlags["contact.form.useActiveForm"] =true;
+    rtFlags["runtime.ssr.productStore.internal.observer"] =true;
+    rtFlags["runtime.ssr.productCustomizations"] =true;
+    rtFlags["flex.megaMenu.a11y"] =false;
+</script>
+<script src="https://static.cdn-website.com/mnlt/production/5488/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-mobile.min.js"  id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="https://static.cdn-website.com/mnlt/production/5488/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script>
+    
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+    if (!window.location.search) {
+        return;
+    }
+	const cleanParams = window.location.search.substring(1); // Strip ?
+	const queryParams = cleanParams.split('&');
+
+	const expires = 'expires=' + new Date().getTime() + 24 * 60 * 60 * 1000;
+	const domain = 'domain=' + window.location.hostname;
+	const path = "path=/";
+
+	queryParams.forEach((param) => {
+		const [key, value = ''] = param.split('=');
+		if (key.startsWith('utm_')) {
+			const cookieName = "_dm_rt_" + key.substring(4);
+			const cookie = cookieName + "=" + value;
+			const joined = [cookie, expires, domain, path].join(";");
+			document.cookie = joined;
+		}
+	});
+}());
+</script>
+<script type="text/javascript" >
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '794768ee'
+});
+
+// snowplow queries element styles so we wait until CSS calculations are done.
+requestAnimationFrame(() => {
+	dmsnowplow('trackPageView');
+	_dm_insite.forEach((rule) => {
+		// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+		// the tracking is in popup.js
+		if (rule.actionName !== "popup") {
+			dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+		}
+		window?.waitForDeferred?.('dmAjax', () => {
+			$.DM.events.trigger('event-ruleTriggered', {value: rule});
+		});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Fechar (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Compartilhar"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Alternar tela cheia "></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Aumentar/diminuir zoom"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Anterior (seta para esquerda)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Próximo (seta para a direita)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+        data-locale="pt_PT"></div>
+<!-- Alias: 794768ee -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<!--  End Script tags -->
+<!--  Begin Body End Markup -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPR34SGH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PF6CQQ2V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDLJBW33"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><!--  End Body End Markup -->
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+</body>
+</html>
